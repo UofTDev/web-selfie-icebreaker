@@ -8,7 +8,7 @@ var gulp         = require('gulp'),
 var globs = {
     css: 'src/css/**/*.less',
     js: 'src/js/**/*.js',
-    html: 'src/*.html',
+    html: 'src/**/*.html',
     images: 'src/img/**',
     misc: 'src/**/*.{ico,eot,woff,ttf,php}'
 };
