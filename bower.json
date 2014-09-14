@@ -1,0 +1,20 @@
+{
+  "name": "web-selfie-icebreaker",
+  "version": "0.0.0",
+  "main": "Gulpfile.js",
+  "license": "MIT",
+  "homepage": "https://github.com/UofTDev/web-selfie-icebreaker",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.2.22",
+    "angular-animate": "~1.2.22"
+  }
+}
