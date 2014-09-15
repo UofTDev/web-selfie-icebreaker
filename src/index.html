@@ -5,8 +5,25 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<body ng-app="beam">
+	<div ng-controller="AppCtrl as app">
+        <div class="armature">
+            <div class="progress-bar" ng-style="app.styles.progressBar">
+
+            </div>
+            <div class="navbar" ng-style="app.styles.navbar">
+                <a class="icon icon-spinner" ng-click="app.generateTodos()"></a>
+            </div>
+        </div>
+        <ul class="todos">
+            <li ng-repeat="todo in app.todos" ng-class="{completed: todo.completed}" ng-click="todo.completed = !! (1 - todo.completed)">
+                <img ng-src="{{ todo.data }}" ng-if="todo.completed" class="icon">
+                <i class="icon checkbox icon-checkbox-unchecked" ng-if="!todo.completed"></i>
+                <i class="icon checkbox icon-checkbox" ng-if="todo.completed"></i>
+                {{ todo.text }}
+            </li>
+        </ul>
+	</div>
+	<script src="js/icebreaker.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 *.so
 .tmp
 dist/
+.idea/
 
 # Packages #
 ############

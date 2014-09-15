@@ -1,1 +1,82 @@
-@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import '../../bower_components/bootstrap/less/variables.less';
+@import '../../bower_components/bootstrap/less/mixins.less';
+
+@import '../../bower_components/bootstrap/less/normalize.less';
+@import '../../bower_components/bootstrap/less/scaffolding.less';
+@import '../../bower_components/bootstrap/less/buttons.less';
+
+@import '_icomoon';
+
+@progress-height: 5px;
+@navbar-height: 70px;
+
+a {
+    cursor: pointer;
+}
+
+.armature {
+    position: fixed;
+    background: @body-bg;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.progress-bar {
+    min-width: 1px;
+    height: @progress-height;
+}
+
+.navbar {
+    height: @navbar-height;
+    background: url('../img/logo.png') center center no-repeat;
+    background-size: contain;
+
+    a.icon {
+        line-height: @navbar-height;
+        width: @navbar-height;
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        opacity: 0.5;
+        transition: 0.3s opacity;
+
+        &:hover,
+        &:active {
+            text-decoration: none;
+            opacity: 1;
+        }
+    }
+}
+
+.todos {
+    padding: 0;
+    margin: 0;
+    margin-top: @progress-height + @navbar-height;
+
+    li {
+        list-style-type: none;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+
+        &.completed {
+            background: #eee;
+            color: #999;
+        }
+    }
+
+    .checkbox {
+        font-size: 22px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .icon-checkbox-unchecked {
+        color: #ccc;
+    }
+
+    .icon-checkbox {
+        color: green;
+    }
+}
