@@ -4,6 +4,7 @@
 @import '../../bower_components/bootstrap/less/normalize.less';
 @import '../../bower_components/bootstrap/less/scaffolding.less';
 @import '../../bower_components/bootstrap/less/buttons.less';
+@import '../../bower_components/bootstrap/less/utilities.less';
 
 @import '_icomoon';
 
@@ -54,11 +55,13 @@ a {
     padding: 0;
     margin: 0;
     margin-top: @progress-height + @navbar-height;
+    line-height: 2.5em;
 
     li {
         list-style-type: none;
         padding: 15px;
         border-bottom: 1px solid #eee;
+        &:extend(.clearfix all);
 
         &.completed {
             background: #eee;
@@ -78,5 +81,10 @@ a {
 
     .icon-checkbox {
         color: green;
+    }
+
+    .thumbnail {
+        max-width: 2.5em;
+        float: right;
     }
 }
