@@ -15,6 +15,9 @@
                 <a class="icon icon-spinner" ng-click="app.generateTodos()"></a>
             </div>
         </div>
+        <div class="completed" ng-if="app.completed">
+            <span>You're done! <small>Go tell someone!</small></span>
+        </div>
         <ul class="todos">
             <li ng-repeat="todo in app.todos" ng-class="{completed: todo.completed}" selfie="app.captureSelfie(todo, data)">
                 <img ng-src="{{ todo.image }}" ng-if="todo.completed" class="thumbnail">

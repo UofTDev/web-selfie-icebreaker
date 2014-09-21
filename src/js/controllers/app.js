@@ -11,6 +11,7 @@ function AppCtrl ($scope) {
 
     vm.captureSelfie = captureSelfie;
     vm.generateTodos = generateTodos;
+    vm.completed     = false;
 
     /**
      * Sets the view's list of todo items, sampled randomly. And goddammit
@@ -39,6 +40,7 @@ function AppCtrl ($scope) {
             navbar: background,
             progressBar: _.extend({width: Math.round(percent * 100) + '%'}, background)
         };
+        vm.completed = percent === 1;
     }
 
     /**
