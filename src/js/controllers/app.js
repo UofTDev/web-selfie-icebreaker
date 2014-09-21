@@ -3,7 +3,7 @@ var angular = require('angular');
 var options = require('../options');
 var color   = require('tinycolor2');
 
-function AppCtrl () {
+function AppCtrl ($scope) {
     var vm = this;
     var todos = options.map(function (text) {
         return {text: text, completed: false, image: null};
@@ -54,9 +54,12 @@ function AppCtrl () {
         });
 
         updateStyles();
+        $scope.$apply();
     }
 
-    setInterval(updateStyles, 1000);
+    generateTodos();
 }
+
+AppCtrl.$inject = ['$scope'];
 
 module.exports = AppCtrl;
