@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>SelfieIcebreaker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="icebreaker">
 	<div ng-controller="AppCtrl as app">
         <div class="armature">
-            <div class="progress-bar" ng-style="app.styles.progressBar">
-
-            </div>
-            <div class="navbar" ng-style="app.styles.navbar">
-                <a class="icon icon-spinner" ng-click="app.generateTodos()"></a>
-            </div>
+            <div class="progress-bar" ng-style="app.styles.progressBar"></div>
+            <div class="navbar" ng-style="app.styles.navbar"></div>
         </div>
-        <div class="completed" ng-if="app.completed">
+        <div class="completed-overlay" ng-if="app.completed">
             <span>You're done! <small>Go tell someone!</small></span>
         </div>
         <ul class="todos">

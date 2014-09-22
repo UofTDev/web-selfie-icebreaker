@@ -40,6 +40,7 @@ gulp.task('js', function () {
                 }
             }
         }))
+        .pipe($.if(isProduction, $.uglify()))
         .pipe(gulp.dest('dist/js'));
 });
 gulp.task('html', function() {
