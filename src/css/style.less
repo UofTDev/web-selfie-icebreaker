@@ -114,3 +114,34 @@ a {
         font-size: 0.5em;
     }
 }
+
+.gallery-body {
+    background: #333;
+
+    h1 {
+        font-family: 'Consolas', monospace;
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+    }
+}
+
+.gallery {
+    &:extend(.clearfix all);
+
+    &, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: block;
+        width: 20%;
+        height: 200px;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        float: left;
+        background-color: #000;
+    }
+}

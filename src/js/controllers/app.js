@@ -1,7 +1,7 @@
 var _       = require('lodash');
-var angular = require('angular');
-var options = require('../options');
+var options = require('../config').options;
 var color   = require('tinycolor2');
+var socket  = require('../socket');
 
 function AppCtrl ($scope) {
     var vm = this;
@@ -56,6 +56,8 @@ function AppCtrl ($scope) {
         });
 
         updateStyles();
+
+        socket.emit('selfie', todo);
         $scope.$apply();
     }
 

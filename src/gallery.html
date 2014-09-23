@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="icebreaker" class="gallery-body">
+    <div ng-controller="GalleryCtrl as gallery">
+        <h1>{{ gallery.url }}</h1>
+        <ul class="gallery">
+            <li ng-repeat="image in gallery.images" style="width:{{ gallery.width }}%;height: {{ gallery.height }}px;background-image: url('{{ image }}');'"></li>
+        </ul>
+    </div>
+    <script src="js/icebreaker.js"></script>
+</body>
+</html>
