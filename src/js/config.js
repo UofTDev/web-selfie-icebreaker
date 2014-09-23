@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'http://localhost:8067',
+    url: 'http://142.151.168.178:8067',
     options: [
         // Wisdom from my text generator plugin. Profound.
         'Going to the monastery doesn’t trap acceptance anymore than understanding creates superior shame.',

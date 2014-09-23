@@ -2,6 +2,7 @@ var _       = require('lodash');
 var options = require('../config').options;
 var color   = require('tinycolor2');
 var socket  = require('../socket');
+var resize  = require('../resize');
 
 function AppCtrl ($scope) {
     var vm = this;
@@ -50,15 +51,16 @@ function AppCtrl ($scope) {
      * @param {*} data
      */
     function captureSelfie (todo, data) {
-        _.extend(todo, {
-            completed: true,
-            image: data
-        });
+        todo.completed = true;
 
         updateStyles();
-
-        socket.emit('selfie', todo);
         $scope.$apply();
+
+        resize(data, 400, 400, function (image) {
+            todo.image = image;
+            socket.emit('selfie', todo);
+            $scope.$apply();
+        })
     }
 
     generateTodos();
