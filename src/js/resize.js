@@ -22,16 +22,17 @@ function imageToDataUri(image, width, height) {
  *
  * @param {string} image
  * @param {number} maxWidth
- * @param {number} maxHeight
- * @param {function} callback
+ * @param {number} param
+ * @maxHeight {function} callback
  */
 module.exports = function (image, maxWidth, maxHeight, callback) {
-    var img   = new Image;
-    var ratio = maxWidth / maxHeight;
+    var img = new Image;
 
     img.onload = function () {
+        var ratio = img.width / img.height;
         var targetWidth, targetHeight;
-        if (img.width > img.height * ratio) {
+
+        if (img.width > maxWidth) {
             targetWidth = maxWidth;
             targetHeight = maxWidth / ratio;
         } else {
