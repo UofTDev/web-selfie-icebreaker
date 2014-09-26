@@ -28,7 +28,7 @@ function GalleryCtrl ($scope) {
      */
     function setSizes () {
         vm.width  = Math.round(100 / rows);
-        vm.height = Math.round(window.innerHeight / rows);
+        vm.height = Math.round(window.innerHeight / columns);
     }
 
     setSizes();
