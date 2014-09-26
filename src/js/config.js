@@ -19,6 +19,18 @@ module.exports = {
         'can speak 3 or more languages',
         'has a birthday in the same month as you',
         'is in 4th year',
-        'is not in CS or ENG'
+        'is not in CS or ENG',
+        'has the same hobby as you',
+        'is in the same program and year as you',
+        'has 2 or more pets',
+        'is wearing a denim shirt',
+        'is the youngest in the family',
+        'is a member of UofTDev since last year',
+        'is on an internship or working',
+        'has been to a concert the past month',
+        'has contributed to an Open Source project',
+        'has Tinder on their phone installed now',
+        'has scored more than 100 on Flappy Bird',
+        'has beaten 2048'
     ]
 };
